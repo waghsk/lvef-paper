@@ -44,7 +44,7 @@ def echoNonTabularEF(txt):
      
     if txt.lower().find("ejection fraction "):
         arr=["increased consistent with hyperdynamic function","lower limits of normal","normal","lower limit of normal","cannot be determined"]
-        arr=sorted(arr, key=len,reverse=True)for a in arr:
+        arr=sorted(arr, key=len,reverse=True) for a in arr:
             x= re.search("ejection fraction.{0,15}("+a+")",txt, re.M|re.I)#.group(0)
             if x:
                 return (x.group(0),x.group(1),"pat7c")
