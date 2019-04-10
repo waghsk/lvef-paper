@@ -1,5 +1,5 @@
 def isLineAHeader(line):
-    if line in headerArr:
+    if line in headerArr:# constructed from header.csv
         return True
     if line.upper()==line and len(line.strip())>10 and  line.find("\d")==-1:
         return True
