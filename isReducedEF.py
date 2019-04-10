@@ -1,3 +1,15 @@
+
+def efDataType(ef):
+    if ef:
+        import re
+        if re.search("\d+",ef) and re.search("[^\d]",ef)==None:
+            return "numeric"
+        if re.search("\d",ef) and re.search("[^\d]",ef):
+            return "range"
+        return "char"
+    else:
+        return None
+
 def isReducedEF (ef):
     dtype=efDataType(ef)
     
